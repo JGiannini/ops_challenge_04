@@ -7,7 +7,7 @@
 # [X] Put the four directories in an array
 # [X] References the array variable to create a new .txt file in each directory
 
-
+#created function containing a for loop to create my four directories
 function create_directories () {
 
     for i in {1..4}
@@ -19,14 +19,14 @@ function create_directories () {
 create_directories
 
 function put_in_array () {
-    my_path="$HOME/Documents/OPs 201 Code Challenges/ops_challenge_04/ops_challenge_04/"
-    my_dir=("dir1" "dir2" "dir3" "dir4")
+    my_path="$HOME/Documents/OPs 201 Code Challenges/ops_challenge_04/ops_challenge_04/" #set a variable equal to path
+    my_dir=("dir1" "dir2" "dir3" "dir4") #created array to hold each directory
 
     for i in {0..3}
     do
-        add_files="${my_path}${my_dir[$i]}"
-        txt_name=("1" "2" "3" "4") 
-        command touch "${add_files}/test${txt_name[$i]}.txt"
+        add_files="${my_path}${my_dir[$i]}" #concatenated variables and my for loop grabs the index of the my_dir array
+        txt_name=("1" "2" "3" "4") #Just for fun created this array to make each file name unique inside each directory
+        command touch "${add_files}/test${txt_name[$i]}.txt" #creates test#.txt file and adds to directory path
     done
 }
 
