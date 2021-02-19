@@ -12,7 +12,7 @@ function create_directories () {
 
     for i in {1..4}
     do
-        command mkdir dir$i
+        command mkdir "dir$i"
     done
 }
 
